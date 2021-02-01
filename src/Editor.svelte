@@ -2,32 +2,34 @@
 
 <script>
   import { onMount, onDestroy, createEventDispatcher } from "svelte";
+  import EditorElement from "./EditorElement.svelte";
 
   export let options = {};
 
   const dispatch = createEventDispatcher();
 
-  let editorRef;
-
   let quill;
 
   export const instance = () => quill;
 
-  const startQuill = () => {
-    quill = new window.Quill(editorRef, {
-      modules: {
-        toolbar: [
-          [{ header: [1, 2, 3, false] }],
-          ["bold", "italic", "underline", "strike"],
-          ["link", "code-block"],
-        ],
-      },
-      placeholder: "Type something...",
-      theme: "snow", // or 'bubble'
-      ...options,
-    });
+  const onMounted = ({ detail }) => startQuill(detail);
 
-    dispatch("created", quill);
+  const startQuill = (editorRef) => {
+    if (editorRef) {
+      quill = new window.Quill(editorRef, {
+        modules: {
+          toolbar: [
+            [{ header: [1, 2, 3, false] }],
+            ["bold", "italic", "underline", "strike"],
+            ["link", "code-block"],
+          ],
+        },
+        placeholder: "Type something...",
+        theme: "snow", // or 'bubble'
+        ...options,
+      });
+      dispatch("created", quill);
+    }
   };
 
   onMount(() => {
@@ -40,4 +42,4 @@
   });
 </script>
 
-<div bind:this={editorRef} />
+<EditorElement on:mounted={onMounted} />
