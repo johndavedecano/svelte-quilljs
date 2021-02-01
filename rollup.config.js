@@ -4,10 +4,10 @@ import resolve from 'rollup-plugin-node-resolve'
 const pkg = require('./package.json')
 
 export default {
-  input: 'src/Editor.svelte',
+  input: 'src/index',
   output: [
-    { file: pkg.module, format: 'en' },
-    { file: pkg.main, format: 'umd', name: 'Editor' },
+    { file: pkg.module, format: 'es' },
+    { file: pkg.main, format: 'umd', name: 'svelte-quilljs' },
   ],
   plugins: [svelte(), resolve()],
 }

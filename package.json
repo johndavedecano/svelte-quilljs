@@ -2,9 +2,9 @@
   "name": "svelte-quilljs",
   "version": "1.0.0",
   "description": "A quill editor component for svelteJS",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w"
@@ -23,6 +23,7 @@
     "rollup": "^2.38.3",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-svg": "^2.0.0",
     "svelte": "^3.32.1"
   }
 }
