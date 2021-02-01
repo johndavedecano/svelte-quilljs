@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/johndavedecano/svelte-quilljs/issues"
   },
-  "homepage": "https://github.com/johndavedecano/svelte-quilljs#readme"
+  "homepage": "https://github.com/johndavedecano/svelte-quilljs#readme",
+  "devDependencies": {
+    "rollup": "^2.38.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.32.1"
+  }
 }
