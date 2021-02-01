@@ -1,0 +1,22 @@
+{
+  "name": "svelte-quilljs",
+  "version": "1.0.0",
+  "description": "A quill editor component for svelteJS",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "svelte": "src/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johndavedecano/svelte-quilljs.git"
+  },
+  "author": "John Dave Decano<johndavedecano@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johndavedecano/svelte-quilljs/issues"
+  },
+  "homepage": "https://github.com/johndavedecano/svelte-quilljs#readme"
+}
